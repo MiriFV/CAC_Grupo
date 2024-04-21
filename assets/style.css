@@ -8,7 +8,7 @@ header {
     color: #fff;
     padding: 10px 0;
     text-align: center;
-    background-image: url(./images/fb501a54a074becf919323c72e2f1b31.jpg);
+    background-image: url(/images/fb501a54a074becf919323c72e2f1b31.jpg);
 }
 nav {
     background-color: #444;
@@ -26,27 +26,49 @@ nav a {
 }
 .container {
     max-width: 1200px;
-    margin: 20px;
+    margin: 20px auto;
+    justify-content: center;
     padding: 20px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
+/* TARJETAS */
 .card {
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 20px;
-    margin: 20px;
-     /* No permitir que las tarjetas se estiren */
-    width: 200px; /* Ancho de cada tarjeta */
-    height: 200px; /* Altura de cada tarjeta */
-    background-color: lightblue;
+    padding: 10px;
+    margin: 10px;
+    width: calc(20% - 20px); /* Ancho calculado para mostrar 5 tarjetas en una fila */
+    max-width: 200px;
+    height: 200px;
+    background-color: rgb(234, 156, 134);
     margin-right: 10px; 
 }
 .card img {
     max-width: 100%;
     max-height: 100%;
   }
+  @media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .card {
+        width: calc(33.33% - 20px); /* Cambia el ancho de las tarjetas para mostrar 3 en una fila en dispositivos más pequeños */
+        max-width: 300px; /* Ajusta el máximo ancho de las tarjetas */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+    .card {
+        width: calc(50% - 20px); /* Cambia el ancho de las tarjetas para mostrar 2 en una fila en dispositivos aún más pequeños */
+        max-width: 300px; /* Ajusta el máximo ancho de las tarjetas */
+    }
+}
+/* FOOTER */
 footer {
     background-color: #333;
     color: #fff;
@@ -73,18 +95,17 @@ h3{
 }
 
 .conScroll{
-  width: 300px; /* Ancho del contenedor */
-  border: 1px solid #ccc; /* Borde para visualización */
+  width: 300px;
   overflow-x: auto; 
 }
 .content {
-    display: flex; /* Activar Flexbox */
-    flex-wrap: nowrap; /* No permitir que las tarjetas se envuelvan a una nueva línea */
-    padding: 10px; /* Añadir un poco de espacio interno */
+    display: flex; 
+    flex-wrap: nowrap; 
+    padding: 10px;
   }
   
 
-/* Buscador */
+/* Buscador  y botones*/
  .cajabuscar{
     display: flex;
     justify-content: center; 
