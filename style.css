@@ -8,6 +8,7 @@ header {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    background-image: url(./images/fb501a54a074becf919323c72e2f1b31.jpg);
 }
 nav {
     background-color: #444;
@@ -46,6 +47,16 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+}
+
+h3{
+    background-color: #f2e5e5;
+    margin-left: 10px;
+  border: 2px solid rgb(216, 2, 134);
+  border-radius: 15px;
+  padding: 10px 18px;
+  display: inline-block;
 }
 /* Buscador */
  .cajabuscar{
@@ -53,6 +64,7 @@ main{
     flex-direction: column;
     align-items: center;
     margin: 20px;
+    background-color: #D80286;
     
 }
 fieldset{
