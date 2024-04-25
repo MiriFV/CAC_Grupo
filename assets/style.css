@@ -3,12 +3,20 @@ body {
     margin: 0;
     padding: 0;
 }
+header h1{
+    font-size: xx-large;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #D80286;
+}
 header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
     text-align: center;
-    background-image: url(/images/fb501a54a074becf919323c72e2f1b31.jpg);
+   /* background-image: url(/images/fb501a54a074becf919323c72e2f1b31.jpg);*/
 }
 nav {
     background-color: #444;
@@ -52,52 +60,14 @@ nav a {
 }
 
 .card img {
-    width: 100%;
-    height: auto;
-}
-
-.card::after {
-    content: attr(data-title);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    text-align: center;
-    transition: opacity 0.3s ease; /* Agrega una transición suave al efecto de aparición */
-    opacity: 0;
-    pointer-events: none;
-}
-
-.card::before {
-    content: attr(data-rating);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    text-align: center;
-    transition: opacity 0.3s ease; /* Agrega una transición suave al efecto de aparición */
-    opacity: 0;
-    pointer-events: none;
-}
-
-.card:hover::after,
-.card:hover::before {
-    opacity: 1;
-}
-
-
-
-
-
-  @media (max-width: 768px) {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    vertical-align: bottom;
+    box-sizing: border-box;
+  }
+  
+@media (max-width: 768px) {
     .container {
         padding: 10px;
     }
@@ -105,6 +75,7 @@ nav a {
         width: calc(33.33% - 20px); /* Cambia el ancho de las tarjetas para mostrar 3 en una fila en dispositivos más pequeños */
         max-width: 300px; /* Ajusta el máximo ancho de las tarjetas */
     }
+    .
 }
 
 @media (max-width: 480px) {
@@ -141,7 +112,14 @@ h3{
   padding: 10px 18px;
   display: inline-block;
 }
-
+h4{
+    background-color: #f2e5e5;
+    margin: 10px;
+  border: 2px solid rgb(216, 2, 134);
+  border-radius: 15px;
+  padding: 10px 18px;
+  display: inline-block;
+}
 .conScroll{
   width: 300px;
   overflow-x: auto; 
@@ -196,6 +174,46 @@ fieldset{
     display: inline-block;
     padding: 10px 18px;
   font-size: 18px;
+}
+/* pag detalles */
+.elemento img{
+    max-width: calc(100% - 20px);
+}
+.elemento {
+    max-width: calc(40% - 20px);
+    align-items: center;
+    padding: auto;
+    margin: auto;
+}
+.elemento iframe{
+    max-width: calc(80%);
+}
+.elemento p{
+    background-color: #f2e5e5;
+    margin: 10px;
+  border: 2px solid rgb(216, 2, 134);
+  border-radius: 15px;
+  padding: 10px 18px;
+  display: inline-block;
+  align-content: center;
+}
+.container-detalles{
+    max-width: 1200px;
+    margin: 20px auto;
+    justify-content: center;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@media (max-width: 480px) {
+    .container-detalles{
+        display: block;
+    }
+    .elemento{
+        max-width: 100vw;
+    }
+    
 }
 
 /* FORMULARIOS */
