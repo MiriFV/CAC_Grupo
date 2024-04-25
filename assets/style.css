@@ -33,7 +33,7 @@ nav a {
     color: #060505;
 }
 .container {
-    max-width: 1200px;
+    max-width: 1200px; /* Podrías ajustar este valor según sea necesario */
     margin: 20px auto;
     justify-content: center;
     padding: 20px;
@@ -41,6 +41,7 @@ nav a {
     align-items: center;
     flex-wrap: wrap;
 }
+
 /* TARJETAS */
 
 .card {
@@ -67,15 +68,14 @@ nav a {
     box-sizing: border-box;
   }
   
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .container {
         padding: 10px;
     }
     .card {
-        width: calc(33.33% - 20px); /* Cambia el ancho de las tarjetas para mostrar 3 en una fila en dispositivos más pequeños */
-        max-width: 300px; /* Ajusta el máximo ancho de las tarjetas */
+        width: calc(33.33% - 20px);
+        max-width: 300px;
     }
-    .
 }
 
 @media (max-width: 480px) {
@@ -83,10 +83,11 @@ nav a {
         padding: 5px;
     }
     .card {
-        width: calc(50% - 20px); /* Cambia el ancho de las tarjetas para mostrar 2 en una fila en dispositivos aún más pequeños */
-        max-width: 300px; /* Ajusta el máximo ancho de las tarjetas */
+        width: calc(50% - 20px);
+        max-width: 300px;
     }
 }
+
 /* FOOTER */
 footer {
     background-color: #333;
@@ -132,14 +133,16 @@ h4{
   
 
 /* Buscador  y botones*/
- .cajabuscar{
+.cajabuscar {
     display: flex;
     justify-content: center; 
     align-items: center;
-    margin: 20px;
-    width: 100vw;
+    margin: 0;
+    padding: 20px; /* Agregamos un relleno para dar espacio al contenido dentro del contenedor */
+    width: 100%; /* Ajustamos el ancho del contenedor al 100% del ancho del viewport */
     background-color: darkgrey;   
 }
+
 .controls button{
     display: inline-block;
 }
