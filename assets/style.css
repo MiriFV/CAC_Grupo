@@ -18,16 +18,37 @@ header {
     text-align: center;
    /* background-image: url(/images/fb501a54a074becf919323c72e2f1b31.jpg);*/
 }
+main {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #905151;
+    padding-bottom: 20px; 
+
+}
 nav {
     background-color: #444;
     padding: 10px 0;
     text-align: center;
+    color: #fff;
 }
+
 nav a {
     color: #fff;
     text-decoration: none;
     margin: 0 10px;
+    transition: transform 0.3s ease; 
+    
 }
+
+nav a:hover {
+    transform: scale(1.1); 
+    font-size: 24px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
 .card a{
     text-decoration: none;
     color: #060505;
@@ -98,11 +119,11 @@ nav a {
     
 }
 .card .overlay p {
-    font-size: 14px; /* Tamaño de la letra reducido (ajusta este valor según sea necesario) */
-    margin: 5px; /* Margen alrededor del elemento <p> */
+    font-size: 14px; 
+    margin: 5px; 
 }
 .card:hover .overlay h4 {
-    text-transform: uppercase; /* Transformar texto de h4 a mayúsculas al pasar el mouse */
+    text-transform: uppercase; 
 }
 
   
@@ -135,13 +156,10 @@ footer {
     /* position: absolute; */
     bottom: 0;
     width: 100%;
+    width: 100%;
+    margin-top: auto;
 }
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #905151;
-}
+
 
 h3{
     background-color: #f2e5e5;
@@ -230,14 +248,53 @@ fieldset{
     max-width: calc(80%);
 }
 .elemento p{
-    background-color: #f2e5e5;
-    margin: 10px;
-  border: 2px solid rgb(216, 2, 134);
-  border-radius: 15px;
-  padding: 10px 18px;
-  display: inline-block;
-  align-content: center;
+    background-color: #f2e5e5; 
+    margin: 10px; 
+    border: 2px solid rgb(216, 2, 134); 
+    border-radius: 15px;
+    padding: 10px 18px; 
+    text-align: justify; 
+    font-size: 16px; 
+    color: #333; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+.elemento h4 {
+    background-color: #f2e5e5; 
+    margin: 10px; 
+    border: 2px solid rgb(216, 2, 134); 
+    border-radius: 15px; 
+    padding: 10px 18px; 
+    display: inline-block; 
+    font-size: 18px;
+    color: #333; 
+    position: relative; 
+}
+
+.elemento h4::before {
+    content: "★★★★★"; 
+    color: #D80286; 
+    position: absolute; 
+    top: 50%; 
+    left: 5px; 
+    transform: translateY(-50%); 
+}
+.calificacion {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+    padding: 10px; 
+    border-radius: 10px;
+    background-color:#D80286 ; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+
+.stars {
+    color: gold; 
+    font-size: 24px; 
+    margin-left: 5px; }
+
+
 .container-detalles{
     max-width: 1200px;
     margin: 20px auto;
@@ -326,4 +383,5 @@ fieldset{
 .buttonSearch:hover {
     background-color: #905151; 
 }
+
 
