@@ -53,7 +53,7 @@ nav a {
     height: auto;
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease; /* Agrega una transición suave al efecto de agrandamiento */
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
@@ -67,6 +67,44 @@ nav a {
     vertical-align: bottom;
     box-sizing: border-box;
   }
+  .card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(88, 27, 27, 0.7);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card .overlay h4,
+.card .overlay p {
+    margin: 5px;
+    color: #fff; 
+    font-size: 18px; 
+    font-weight: bold; 
+    background-color: transparent; 
+    border: none; 
+    padding: 0; 
+    
+}
+.card .overlay p {
+    font-size: 14px; /* Tamaño de la letra reducido (ajusta este valor según sea necesario) */
+    margin: 5px; /* Margen alrededor del elemento <p> */
+}
+.card:hover .overlay h4 {
+    text-transform: uppercase; /* Transformar texto de h4 a mayúsculas al pasar el mouse */
+}
+
   
   @media (max-width: 768px) {
     .container {
